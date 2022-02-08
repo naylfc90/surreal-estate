@@ -1,0 +1,32 @@
+.navbar {
+  background-color: lightgray;
+  border-bottom: 3px solid black;
+  width: 100%;
+  height: auto;
+  margin: 0;
+  position: absolute;
+}
+
+.navbar-logo {
+  float: left;
+  width: 210px;
+  height: 60px;
+  padding: 10px 10px 15px 20px;
+}
+
+.navbar-links-item {
+  display: inline-block;
+  padding: 10px 20px 10px 20px;
+  margin: 0;
+}
+
+.navbar-links-item:hover {
+  background-color: lightskyblue;
+  border: 1.5px solid black;
+  border-radius: 12px;
+  padding: 8.5px 18.5px 8.5px 18.5px;
+}
+
+a:visited {
+  color: black;
+}
