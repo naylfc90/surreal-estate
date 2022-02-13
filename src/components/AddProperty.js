@@ -5,8 +5,12 @@ const AddProperty = () => {
   const initialState = {
     fields: {
       title: "",
-      city: "Liverpool",
       type: "Flat",
+      bedrooms: "",
+      bathrooms: "",
+      price: "",
+      city: "Liverpool",
+      email: "",
     },
   };
   const [fields, setFields] = useState(initialState.fields);
@@ -30,7 +34,65 @@ const AddProperty = () => {
             <input
               id="title"
               name="title"
+              placeholder="eg. 2 bed flat"
               value={fields.title}
+              onChange={handleFieldChange}
+            />
+          </label>
+
+          <label htmlFor="type">
+            Property Type <br />
+            <select
+              id="type"
+              name="type"
+              value={fields.type}
+              onChange={handleFieldChange}
+            >
+              <option value="Flat">Flat</option>
+              <option value="Detached">Detached</option>
+              <option value="Semi-Detached">Semi-Detached</option>
+              <option value="Terraced">Terraced</option>
+              <option value="End of Terrace">End of Terrace</option>
+              <option value="Cottage">Cottage</option>
+              <option value="Bungalow">Bungalow</option>
+            </select>
+          </label>
+
+          <label htmlFor="bedrooms">
+            No of Bedrooms <br />
+            <input
+              id="bedrooms"
+              name="bedrooms"
+              type="number"
+              min="1"
+              max="10"
+              value={fields.bedrooms}
+              onChange={handleFieldChange}
+            />
+          </label>
+
+          <label htmlFor="bathrooms">
+            No of Bathrooms <br />
+            <input
+              id="bathrooms"
+              name="bathrooms"
+              type="number"
+              min="1"
+              max="10"
+              value={fields.bathrooms}
+              onChange={handleFieldChange}
+            />
+          </label>
+
+          <label htmlFor="price">
+            Price <br />
+            <input
+              className="add-property__price"
+              id="price"
+              name="price"
+              type="number"
+              placeholder="eg. £100,000"
+              value={fields.price}
               onChange={handleFieldChange}
             />
           </label>
@@ -50,22 +112,16 @@ const AddProperty = () => {
             </select>
           </label>
 
-          <label htmlFor="type">
-            Property Type <br />
-            <select
-              id="type"
-              name="type"
-              value={fields.type}
+          <label htmlFor="email">
+            Email Address <br />
+            <input
+              id="email"
+              name="email"
+              type="email"
+              placeholder="joebloggs@email.com"
+              value={fields.email}
               onChange={handleFieldChange}
-            >
-              <option value="Flat">Flat</option>
-              <option value="Detached">Detached</option>
-              <option value="Semi-Detached">Semi-Detached</option>
-              <option value="Terraced">Terraced</option>
-              <option value="End of Terrace">End of Terrace</option>
-              <option value="Cottage">Cottage</option>
-              <option value="Bungalow">Bungalow</option>
-            </select>
+            />
           </label>
 
           <button type="submit">Add</button>
