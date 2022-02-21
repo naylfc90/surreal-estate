@@ -1,0 +1,23 @@
+.icon {
+  padding-right: 5px;
+}
+
+.property-card {
+  background-color: lightgray;
+  padding: 10px;
+  border: 1px solid black;
+  border-radius: 10px;
+  width: 250px;
+}
+
+.property-card__item {
+  padding-bottom: 5px;
+}
+
+.property-card__email {
+  padding: 5px;
+  background-color: lightskyblue;
+  border: 1px solid black;
+  border-radius: 10px;
+  width: fit-content;
+}
