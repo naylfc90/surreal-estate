@@ -8,6 +8,10 @@ label {
   margin-bottom: 20px;
 }
 
+.add-property__title {
+  padding-top: 20px;
+}
+
 .add-property__price {
   width: 150px;
 }
