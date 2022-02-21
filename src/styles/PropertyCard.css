@@ -1,10 +1,10 @@
 .icon {
-  padding-right: 5px;
+  padding-right: 10px;
 }
 
 .property-card {
   background-color: lightgray;
-  padding: 10px;
+  padding: 20px;
   border: 1px solid black;
   border-radius: 10px;
   width: 250px;
@@ -15,9 +15,18 @@
 }
 
 .property-card__email {
+  position: static;
+  text-align: center;
   padding: 5px;
-  background-color: lightskyblue;
+  background-color: #da7c1f;
   border: 1px solid black;
   border-radius: 10px;
-  width: fit-content;
+  width: 200px;
+  margin-left: 20px;
+  margin-top: 10px;
+}
+
+a:link {
+  text-decoration: none;
+  color: #39393a;
 }

@@ -1,7 +1,7 @@
 import React from "react";
 import PropTypes from "prop-types";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import { faBed, faShower } from "@fortawesome/free-solid-svg-icons";
+import { faBed, faShower, faEnvelope } from "@fortawesome/free-solid-svg-icons";
 
 import "../styles/PropertyCard.css";
 
@@ -22,7 +22,8 @@ const PropertyCard = (props) => {
       <div className="property-card__item">£{price}</div>
       <div className="property-card__item">City: {city}</div>
       <div className="property-card__email">
-        <a href={`mailto:${email}`}>Email</a>
+        <FontAwesomeIcon icon={faEnvelope} />
+        <a href={`mailto:${email}`}> Email</a>
       </div>
     </div>
   );
