@@ -1,9 +1,9 @@
 import React from "react";
 import { Link, Route, Switch } from "react-router-dom";
 import NavBar from "./NavBar";
-import "../styles/App.css";
 import Properties from "./Properties";
 import AddProperty from "./AddProperty";
+import "../styles/App.css";
 
 const App = () => {
   return (
