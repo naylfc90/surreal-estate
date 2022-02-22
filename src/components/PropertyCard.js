@@ -8,23 +8,26 @@ import "../styles/PropertyCard.css";
 const PropertyCard = (props) => {
   const { title, type, bedrooms, bathrooms, price, city, email } = props;
   return (
-    <div className="property-card">
-      <div className="property-card__item">
+    <div>
+      <p>
         <b>{title}</b>
-      </div>
-      <div className="property-card__item">Property Type: {type}</div>
-      <div className="property-card__item">
-        <FontAwesomeIcon className="icon" icon={faBed} /> {bedrooms}
-      </div>
-      <div className="property-card__item">
-        <FontAwesomeIcon className="icon" icon={faShower} /> {bathrooms}
-      </div>
-      <div className="property-card__item">£{price}</div>
-      <div className="property-card__item">City: {city}</div>
-      <div className="property-card__email">
+      </p>
+      <p>
+        {type} - {city}
+      </p>
+      <p>
+        <FontAwesomeIcon className="icon" alt="Bedrooms" icon={faBed} />{" "}
+        {bedrooms}
+      </p>
+      <p>
+        <FontAwesomeIcon className="icon" alt="Bathrooms" icon={faShower} />{" "}
+        {bathrooms}
+      </p>
+      <p>£{price}</p>
+      <p className="property-card__email">
         <FontAwesomeIcon icon={faEnvelope} />
         <a href={`mailto:${email}`}> Email</a>
-      </div>
+      </p>
     </div>
   );
 };

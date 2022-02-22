@@ -28,14 +28,14 @@ const AddProperty = () => {
     console.log(fields);
     axios
       .post("http://localhost:4000/api/v1/PropertyListing", fields)
-      .then(function (response) {
+      .then((response) => {
         console.log(response);
         setAlert({
           message: "Property Added",
           isSuccessful: true,
         });
       })
-      .catch(function (error) {
+      .catch((error) => {
         console.log(error);
         setAlert({
           message: "Server Error: Please try again later",
@@ -53,7 +53,7 @@ const AddProperty = () => {
       <h1>Add Property Page</h1>
       <div className="add-property__form">
         <form onSubmit={handleAddProperty}>
-          <Alert message={alert.message} success={alert.isSuccess} />
+          <Alert message={alert.message} success={alert.isSuccessful} />
 
           <label className="add-property__title" htmlFor="title">
             Enter a Title <br />
