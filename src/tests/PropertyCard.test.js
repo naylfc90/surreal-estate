@@ -2,7 +2,7 @@ import React from "react";
 import { render } from "@testing-library/react";
 import PropertyCard from "../components/PropertyCard";
 
-describe("ForecastSummary", () => {
+describe("PropertyCard", () => {
   const validProps = {
     title: "2 Bedroom Flat",
     type: "Flat",

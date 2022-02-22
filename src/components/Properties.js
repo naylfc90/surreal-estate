@@ -18,37 +18,12 @@ const Properties = () => {
       .get("http://localhost:4000/api/v1/PropertyListing", [])
       .then(({ data }) => setProperties(data))
       .catch((error) => {
-        console.log(error);
         setAlert({
           message: "No Properties Found",
         });
+        return error;
       });
   });
-
-  // const validProps = {
-  //   title: "2 Bedroom Flat",
-  //   type: "Flat",
-  //   bedrooms: 2,
-  //   bathrooms: 1,
-  //   price: 100000,
-  //   city: "Liverpool",
-  //   email: "nay@horne.com",
-  // };
-
-  // return (
-  //   <div>
-  //     <h1>Properties Page</h1>
-  //     <PropertyCard
-  //       title={validProps.title}
-  //       type={validProps.type}
-  //       bedrooms={validProps.bedrooms}
-  //       bathrooms={validProps.bathrooms}
-  //       price={validProps.price}
-  //       city={validProps.city}
-  //       email={validProps.email}
-  //     />
-  //   </div>
-  // );
 
   return (
     <>

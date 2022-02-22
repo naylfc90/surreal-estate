@@ -25,22 +25,21 @@ const AddProperty = () => {
   const handleAddProperty = (event) => {
     event.preventDefault();
     setAlert({ message: "", isSuccessful: false });
-    console.log(fields);
     axios
       .post("http://localhost:4000/api/v1/PropertyListing", fields)
       .then((response) => {
-        console.log(response);
         setAlert({
           message: "Property Added",
           isSuccessful: true,
         });
+        return response;
       })
       .catch((error) => {
-        console.log(error);
         setAlert({
           message: "Server Error: Please try again later",
           isSuccessful: false,
         });
+        return error;
       });
   };
 
@@ -63,6 +62,7 @@ const AddProperty = () => {
               placeholder="eg. 2 bed flat"
               value={fields.title}
               onChange={handleFieldChange}
+              required
             />
           </label>
 
@@ -94,6 +94,7 @@ const AddProperty = () => {
               max="10"
               value={fields.bedrooms}
               onChange={handleFieldChange}
+              required
             />
           </label>
 
@@ -107,6 +108,7 @@ const AddProperty = () => {
               max="10"
               value={fields.bathrooms}
               onChange={handleFieldChange}
+              required
             />
           </label>
 
@@ -120,6 +122,7 @@ const AddProperty = () => {
               placeholder="eg. £100,000"
               value={fields.price}
               onChange={handleFieldChange}
+              required
             />
           </label>
 
@@ -147,6 +150,7 @@ const AddProperty = () => {
               placeholder="joebloggs@email.com"
               value={fields.email}
               onChange={handleFieldChange}
+              required
             />
           </label>
 
