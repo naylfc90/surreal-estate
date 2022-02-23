@@ -10,7 +10,7 @@ const AddProperty = () => {
       type: "Flat",
       bedrooms: 0,
       bathrooms: 0,
-      price: 0,
+      price: "",
       city: "Liverpool",
       email: "",
     },
