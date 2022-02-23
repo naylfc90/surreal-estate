@@ -90,8 +90,8 @@ const AddProperty = () => {
               id="bedrooms"
               name="bedrooms"
               type="number"
-              min="1"
-              max="10"
+              min={1}
+              max={10}
               value={fields.bedrooms}
               onChange={handleFieldChange}
               required
@@ -104,8 +104,8 @@ const AddProperty = () => {
               id="bathrooms"
               name="bathrooms"
               type="number"
-              min="1"
-              max="10"
+              min={1}
+              max={10}
               value={fields.bathrooms}
               onChange={handleFieldChange}
               required
