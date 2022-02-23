@@ -8,9 +8,9 @@ const AddProperty = () => {
     fields: {
       title: "",
       type: "Flat",
-      bedrooms: "",
-      bathrooms: "",
-      price: "",
+      bedrooms: 0,
+      bathrooms: 0,
+      price: 0,
       city: "Liverpool",
       email: "",
     },

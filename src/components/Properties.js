@@ -32,20 +32,32 @@ const Properties = () => {
   useEffect(() => {
     axios
       .get(`http://localhost:4000/api/v1/PropertyListing/${search}`)
-      .then(({ data }) => setProperties(data))
+      .then(({ data }) => {
+        console.log({ data });
+        setProperties(data);
+      })
       .catch((error) => console.error(error));
   }, [search]);
 
+  /* eslint no-underscore-dangle: 0 */
   return (
     <>
       <Sidebar />
-      <h1>Properties Page</h1>
       <Alert message={alert.message} />
       {!alert.message && (
-        <div className="property-card__outer">
+        <div className="property-card__container">
           {properties.map((property) => (
             <div className="property-card">
-              <PropertyCard key={property.id} {...property} />
+              <PropertyCard
+                key={property._id}
+                title={property.title}
+                type={property.type}
+                bathrooms={parseInt(property.bathrooms, 10)}
+                bedrooms={parseInt(property.bedrooms, 10)}
+                price={parseInt(property.price, 10)}
+                city={property.city}
+                email={property.email}
+              />
             </div>
           ))}
         </div>

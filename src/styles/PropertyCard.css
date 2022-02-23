@@ -2,7 +2,7 @@
   padding-right: 5px;
 }
 
-.property-card__outer {
+.property-card__container {
   display: flex;
   flex-direction: row;
   flex-wrap: wrap;
