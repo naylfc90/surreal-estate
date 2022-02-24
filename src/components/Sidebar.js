@@ -39,15 +39,15 @@ const Sidebar = () => {
     <div className="sidebar">
       <form onSubmit={handleSearch}>
         <input
+          className="search_input"
           type="text"
           value={query}
           onChange={(e) => setQuery(e.target.value)}
         />
-        <button type="submit">
+        <button type="submit" className="search_submit-button">
           <FontAwesomeIcon icon={faMagnifyingGlass} alt="Search" />
         </button>
       </form>
-
       <p>
         <b>Filter by City</b>
       </p>
@@ -56,29 +56,29 @@ const Sidebar = () => {
         to={buildQueryString("query", { city: "Liverpool" })}
       >
         Liverpool
-      </Link>
-
+      </Link>{" "}
+      <br />
       <Link
         className="sidebar-city__search"
         to={buildQueryString("query", { city: "Manchester" })}
       >
         Manchester
-      </Link>
-
+      </Link>{" "}
+      <br />
       <Link
         className="sidebar-city__search"
         to={buildQueryString("query", { city: "Leeds" })}
       >
         Leeds
-      </Link>
-
+      </Link>{" "}
+      <br />
       <Link
         className="sidebar-city__search"
         to={buildQueryString("query", { city: "Sheffield" })}
       >
         Sheffield
-      </Link>
-
+      </Link>{" "}
+      <br /> <br />
       <p>
         <b>Sort by</b>
       </p>
@@ -87,8 +87,8 @@ const Sidebar = () => {
         to={buildQueryString("sort", { price: 1 })}
       >
         Price Ascending
-      </Link>
-
+      </Link>{" "}
+      <br />
       <Link
         className="sidebar-price"
         to={buildQueryString("sort", { price: -1 })}

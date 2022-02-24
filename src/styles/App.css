@@ -2,5 +2,8 @@
 
 body {
   font-family: "Outfit", sans-serif;
+  color: black;
   background-color: #f0f6f6;
+  width: 75%;
+  padding-left: 21%;
 }
